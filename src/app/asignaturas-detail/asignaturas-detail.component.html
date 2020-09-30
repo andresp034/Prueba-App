@@ -1,0 +1,13 @@
+<p>asignaturas-detail works!</p>
+
+<div *ngIf="asignatura">
+
+    <h2>{{asignatura.nombre | uppercase}} Details</h2>
+    <div><span>id: </span>{{asignatura.id}}</div>
+    <div>
+      <label>nombre:
+        <input [(ngModel)]="asignatura.nombre" placeholder="nombre"/>
+      </label>
+    </div>
+    <button (click)="goBack()">go back</button>
+</div>

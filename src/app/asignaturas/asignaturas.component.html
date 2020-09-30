@@ -1,0 +1,20 @@
+<p>asignaturas works!</p>
+<!--<h2>{{asignatura.nombre | uppercase}} Details</h2>
+<div><span>id: </span>{{asignatura.id}}</div>
+<div>
+    <label>name:
+      <input [(ngModel)]="asignatura.nombre" placeholder="nombre"/>
+    </label>
+</div>-->
+
+
+<h2>Asignaturas</h2>
+<ul class="asignaturas">
+  <li *ngFor="let asignatura of asignaturas">
+    <a routerLink="/detail/{{asignatura.id}}">
+      <span class="badge">{{asignatura.id}}</span> {{asignatura.nombre}}
+    </a>
+  </li>
+</ul>
+
+<!--<app-asignaturas-detail [asignatura]="selectedAsignatura"></app-asignaturas-detail> -->
